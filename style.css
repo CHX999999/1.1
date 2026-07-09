@@ -1164,10 +1164,12 @@ details {
 .footer-elite {
     padding: 60px 20px;
     text-align: center;
-    color: #64748B; /* Gris azulado neutro */
-    border-top: 1px solid rgba(255, 255, 255, 0.05); /* Línea casi imperceptible */
-    margin-top: 80px;
+    color: #64748B;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    /* Al usar -10px, forzamos al elemento a subir 20px respecto a tu ajuste anterior de 10px */
+    margin-top: -37px; 
 }
+
 
 .footer-meta {
     margin-bottom: 20px;
@@ -1278,3 +1280,25 @@ body {
     margin-top: 0;
 }
 
+
+/* Corrección de tamaño para botones móviles */
+@media (max-width: 640px) {
+    /* Seleccionamos ambos botones para igualarlos */
+    #theme-toggle, 
+    #share-btn {
+        width: 40px !important;    /* Tamaño fijo igual para ambos */
+        height: 40px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        padding: 0 !important;      /* Eliminamos padding interno para centrar mejor */
+        margin: 0 !important;       /* Aseguramos que no tengan márgenes distintos */
+        font-size: 1rem !important; /* Mismo tamaño de fuente/icono */
+    }
+
+    /* Ajuste específico para el contenedor de la cabecera en móvil */
+    .header-actions {
+        display: flex;
+        gap: 10px;                  /* Espacio uniforme entre los dos botones */
+    }
+}
