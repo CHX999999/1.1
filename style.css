@@ -1400,3 +1400,21 @@ body {
         font-size: 13px;
     }
 }
+
+/* --- POSICIONAMIENTO INTELIGENTE DEL BANNER --- */
+@media (max-width: 768px) {
+    .support-banner {
+        position: fixed; /* Se mantiene visible mientras bajas */
+        bottom: 20px;
+        right: 20px;
+        width: calc(100% - 40px);
+        max-width: 300px;
+        transition: none; 
+    }
+
+    /* Clase que se activa con JS al llegar al final */
+    .support-banner.is-at-bottom {
+        position: absolute; 
+        bottom: 20px; /* Ajustado para que descanse sobre el footer */
+    }
+}
