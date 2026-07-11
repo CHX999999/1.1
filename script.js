@@ -484,3 +484,10 @@ if (closeBtn && banner) {
         setTimeout(() => banner.style.display = 'none', 300);
     });
 }
+
+// --- LÓGICA DE DETECCIÓN MÁS PRECISA ---
+if (scrollTop + clientHeight >= scrollHeight - 250) {
+    banner.classList.add('is-at-bottom');
+} else {
+    banner.classList.remove('is-at-bottom');
+}

@@ -1443,3 +1443,8 @@ body {
         text-align: center;
     }
 }
+
+/* --- ESPACIO EXTRA PARA EL FOOTER --- */
+body {
+    padding-bottom: 250px; /* Ajusta este valor según la altura de tu banner */
+}
