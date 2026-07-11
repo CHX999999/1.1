@@ -485,13 +485,13 @@ if (closeBtn && banner) {
     });
 }
 
-// --- LÓGICA DE DETECCIÓN MÁS PRECISA ---
-if (scrollTop + clientHeight >= scrollHeight - 250) {
-    banner.classList.add('is-at-bottom');
-} else {
-    banner.classList.remove('is-at-bottom');
-}
 
-// Asegúrate de que este cálculo sea el que usa tu script
-const isBottom = (window.innerHeight + window.scrollY) >= document.body.offsetHeight - 50;
-banner.classList.toggle('is-at-bottom', isBottom);
+
+// --- LÓGICA DE DETECCIÓN FINAL ---
+window.addEventListener('scroll', () => {
+    const banner = document.querySelector('.support-banner');
+    if (banner) {
+        const isBottom = (window.innerHeight + window.scrollY) >= document.body.offsetHeight - 100;
+        banner.classList.toggle('at-bottom', isBottom);
+    }
+});
