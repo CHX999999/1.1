@@ -1369,25 +1369,34 @@ body {
     font-size: 14px;
 }
 
-/* --- AJUSTE RESPONSIVE: CARTEL DE DONACIONES --- */
+/* --- ESTILO ELITE: NO INTRUSIVO (FIJO EN PIE) --- */
 @media (max-width: 768px) {
     .support-banner {
-        /* Mantenemos tu diseño original, solo ajustamos tamaño y posición */
-        width: 90%;          /* Tamaño conveniente para móviles */
-        max-width: 340px;    /* No se vuelve excesivamente ancho en tablets */
-        right: 5%;           /* Centrado horizontal */
-        left: 5%;            /* Centrado horizontal */
-        bottom: 20px;        /* Mantiene la distancia inferior original */
-        padding: 12px;       /* Reducimos ligeramente el padding interno */
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        max-width: none;
+        border-radius: 16px 16px 0 0; /* Solo bordes superiores */
+        padding: 16px;
+        background: #ffffff;
+        box-shadow: 0 -4px 15px rgba(0,0,0,0.1);
+        z-index: 9999;
     }
 
     .banner-content p {
-        font-size: 13px;     /* Ajuste leve para que el texto encaje mejor */
+        font-size: 13px; /* Más compacto */
+        margin: 0 0 10px 0;
     }
 
-    .cta-btn, 
-    .sponsor-btn {
-        padding: 8px 12px;   /* Mantenemos tu padding original */
-        font-size: 13px;     /* Mantenemos tu tamaño de fuente original */
+    .banner-actions {
+        flex-direction: row; /* Botones horizontales para ahorrar altura */
+        gap: 8px;
+    }
+
+    .cta-btn, .sponsor-btn {
+        flex: 1; /* Distribuye espacio */
+        padding: 10px;
+        font-size: 13px;
     }
 }
