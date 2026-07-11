@@ -1407,30 +1407,32 @@ body {
 }
 
 
-/* --- ESTILO ELITE: CENTRADO FORZADO --- */
+/* --- ESTILO ELITE: FIJO, CENTRADO Y NO OBSTRUCTIVO --- */
 @media (max-width: 768px) {
     .support-banner {
-        /* Fuerza la eliminación del posicionamiento antiguo */
-        position: relative !important; 
-        right: auto !important;
-        left: auto !important;
-        bottom: auto !important;
-        
-        /* Centrado */
-        margin: 20px auto !important;
-        display: block !important;
+        /* Centrado absoluto */
+        position: fixed; 
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 20px;
         
         /* Estilos visuales */
-        border: none !important;
-        background: rgba(255, 255, 255, 0.95); 
-        backdrop-filter: blur(10px); 
-        padding: 14px;
-        width: 92%;
+        width: 90%;
         max-width: 340px;
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        padding: 14px;
         border-radius: 16px;
         box-shadow: 0 8px 30px rgba(0,0,0,0.3);
-        transition: transform 0.3s ease, opacity 0.3s ease;
+        border: none !important;
+        z-index: 9998;
         box-sizing: border-box;
+    }
+
+    /* Esta clase se activa con el script para que "suba" al llegar al fondo */
+    .support-banner.is-at-bottom {
+        position: absolute;
+        bottom: 20px; /* Ajusta este valor si necesitas más espacio sobre el footer */
     }
 
     .banner-content p {
