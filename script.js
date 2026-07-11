@@ -491,3 +491,7 @@ if (scrollTop + clientHeight >= scrollHeight - 250) {
 } else {
     banner.classList.remove('is-at-bottom');
 }
+
+// Asegúrate de que este cálculo sea el que usa tu script
+const isBottom = (window.innerHeight + window.scrollY) >= document.body.offsetHeight - 50;
+banner.classList.toggle('is-at-bottom', isBottom);

@@ -1446,27 +1446,42 @@ body {
         font-size: 12px;
     }
 
-    /* --- AJUSTE PARA QUE EL BANNER APAREZCA DONDE ESTÁ EL CONTENIDO --- */
+    /* --- ESTILO ELITE: AJUSTADO Y SIN ESPACIOS --- */
 @media (max-width: 768px) {
+    /* Agregamos espacio justo al final para que el scroll permita ver lo legal */
+    body {
+        padding-bottom: 180px; 
+    }
+
     .support-banner {
-        position: relative !important; /* Cambiamos de fixed a relative */
-        margin: 20px auto !important;  /* Margen para separarlo del contenido superior */
-        bottom: auto !important;       /* Quitamos la posición fija inferior */
-        left: auto !important;
-        transform: none !important;    /* Eliminamos el centrado transform */
-        width: 92% !important; 
-        max-width: 350px !important;
-        padding: 12px !important;
-        border-radius: 12px !important;
-        background: rgba(255, 255, 255, 0.95) !important;
-        backdrop-filter: blur(8px) !important;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.2) !important;
-        z-index: 10 !important;        /* Ya no necesita estar encima de todo */
-        box-sizing: border-box !important;
+        position: fixed; 
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 15px; /* Más compacto */
+        
+        width: 90%;
+        max-width: 320px;
+        background: rgba(255, 255, 255, 0.98); /* Fondo más sólido */
+        backdrop-filter: blur(10px);
+        padding: 12px; /* Reducido para mayor compactibilidad */
+        border-radius: 14px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        border: none !important;
+        z-index: 9998;
+        box-sizing: border-box;
+    }
+
+    /* Cuando llega al final, se vuelve absoluto para quedar "justo" sobre el footer */
+    .support-banner.is-at-bottom {
+        position: absolute;
+        bottom: 20px; 
     }
 
     .banner-content p {
-        font-size: 12px !important;
-        margin: 5px 0 !important;
+        font-size: 12px;
+        color: #1e293b;
+        font-weight: 500;
+        margin-bottom: 8px; /* Menos margen, más compacto */
+        text-align: center;
     }
 }
