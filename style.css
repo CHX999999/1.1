@@ -1405,3 +1405,28 @@ body {
         font-size: 16px;
     }
 }
+
+
+/* --- ESTILO ELITE: PERFECCIONADO --- */
+@media (max-width: 768px) {
+    .support-banner {
+        border: none !important;
+        /* Fondo ligeramente gris para que no "brille" tanto sobre el fondo negro */
+        background: rgba(255, 255, 255, 0.95); 
+        backdrop-filter: blur(10px); /* Efecto vidrio esmerilado, muy usado en apps modernas */
+        padding: 14px;
+        width: 92%;
+        max-width: 340px;
+        bottom: 12px;
+        border-radius: 16px; /* Más redondeado, más amigable */
+        box-shadow: 0 8px 30px rgba(0,0,0,0.3); /* Sombra más profunda para darle profundidad */
+        transition: transform 0.3s ease, opacity 0.3s ease; /* Entrada suave */
+    }
+
+    .banner-content p {
+        font-size: 13px;
+        color: #1e293b; /* Gris oscuro para mejor lectura sobre fondo claro */
+        font-weight: 500;
+        margin-bottom: 12px;
+    }
+}

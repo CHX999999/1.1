@@ -471,3 +471,16 @@ shareBtn.onclick = () => {
     }
 };
 
+
+
+// --- LÓGICA DE CIERRE CON ANIMACIÓN ---
+const closeBtn = document.querySelector('.close-btn');
+const banner = document.querySelector('.support-banner');
+
+if (closeBtn && banner) {
+    closeBtn.addEventListener('click', () => {
+        banner.style.opacity = '0';
+        banner.style.transform = 'translateY(20px)';
+        setTimeout(() => banner.style.display = 'none', 300);
+    });
+}
