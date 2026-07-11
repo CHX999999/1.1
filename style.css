@@ -1446,26 +1446,27 @@ body {
         font-size: 12px;
     }
 
-    /* --- ESTILO ELITE: FINAL Y PROLIJO --- */
+    /* --- AJUSTE PARA QUE EL BANNER APAREZCA DONDE ESTÁ EL CONTENIDO --- */
 @media (max-width: 768px) {
-    /* 1. Aseguramos que la página tenga espacio para scrollear */
-    body {
-        padding-bottom: 220px; /* Suficiente espacio para el banner + aviso legal */
+    .support-banner {
+        position: relative !important; /* Cambiamos de fixed a relative */
+        margin: 20px auto !important;  /* Margen para separarlo del contenido superior */
+        bottom: auto !important;       /* Quitamos la posición fija inferior */
+        left: auto !important;
+        transform: none !important;    /* Eliminamos el centrado transform */
+        width: 92% !important; 
+        max-width: 350px !important;
+        padding: 12px !important;
+        border-radius: 12px !important;
+        background: rgba(255, 255, 255, 0.95) !important;
+        backdrop-filter: blur(8px) !important;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.2) !important;
+        z-index: 10 !important;        /* Ya no necesita estar encima de todo */
+        box-sizing: border-box !important;
     }
 
-    .support-banner {
-        position: fixed;
-        left: 50%;
-        transform: translateX(-50%);
-        bottom: 10px;
-        width: 90%;
-        max-width: 320px;
-        padding: 10px;
-        border-radius: 12px;
-        background: rgba(255, 255, 255, 0.98);
-        backdrop-filter: blur(10px);
-        box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-        z-index: 9999;
-        box-sizing: border-box;
+    .banner-content p {
+        font-size: 12px !important;
+        margin: 5px 0 !important;
     }
 }
