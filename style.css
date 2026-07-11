@@ -1448,3 +1448,42 @@ body {
 body {
     padding-bottom: 250px; /* Ajusta este valor según la altura de tu banner */
 }
+
+/* --- ESTILO ELITE: DIMENSIONES JUSTAS --- */
+@media (max-width: 768px) {
+    .support-banner {
+        /* Posicionamiento */
+        position: fixed;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 10px; /* Más pegado al borde inferior */
+        
+        /* Dimensiones ajustadas */
+        width: 92%;
+        max-width: 340px;
+        padding: 10px; /* Padding reducido al mínimo necesario */
+        border-radius: 12px;
+        
+        /* Estilos visuales */
+        background: rgba(255, 255, 255, 0.98); /* Fondo casi opaco para mejor lectura */
+        backdrop-filter: blur(8px);
+        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        z-index: 9998;
+        box-sizing: border-box;
+    }
+
+    /* Reducción de márgenes en el contenido interno */
+    .banner-content p {
+        font-size: 12px;
+        margin: 0 0 8px 0; /* Margen inferior mínimo */
+        line-height: 1.2;
+        text-align: center;
+    }
+
+    /* Ajuste de los botones para ocupar el espacio justo */
+    .support-banner button, 
+    .support-banner a {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+}
