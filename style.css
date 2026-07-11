@@ -1485,3 +1485,26 @@ body {
         text-align: center;
     }
 }
+
+/* --- ESTILO ELITE: FINAL DEFINITIVO --- */
+@media (max-width: 768px) {
+    /* Eliminamos cualquier margen/padding extra en el body */
+    body {
+        padding-bottom: 0 !important;
+        margin-bottom: 0 !important;
+    }
+
+    .support-banner {
+        position: relative !important; /* Se coloca naturalmente al final */
+        margin: 20px auto 0 auto !important; /* Ajusta la separación del aviso legal */
+        
+        width: 92%;
+        max-width: 340px;
+        background: rgba(255, 255, 255, 0.98);
+        backdrop-filter: blur(10px);
+        padding: 12px;
+        border-radius: 16px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        box-sizing: border-box;
+    }
+}
