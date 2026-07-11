@@ -1408,26 +1408,7 @@ body {
 
 
 /* --- ESTILO ELITE: FIJO, CENTRADO Y NO OBSTRUCTIVO --- */
-@media (max-width: 768px) {
-    .support-banner {
-        /* Centrado absoluto */
-        position: fixed; 
-        left: 50%;
-        transform: translateX(-50%);
-        bottom: 20px;
-        
-        /* Estilos visuales */
-        width: 90%;
-        max-width: 340px;
-        background: rgba(255, 255, 255, 0.95);
-        backdrop-filter: blur(10px);
-        padding: 14px;
-        border-radius: 16px;
-        box-shadow: 0 8px 30px rgba(0,0,0,0.3);
-        border: none !important;
-        z-index: 9998;
-        box-sizing: border-box;
-    }
+
 
     /* Esta clase se activa con el script para que "suba" al llegar al fondo */
     .support-banner.is-at-bottom {
@@ -1449,28 +1430,6 @@ body {
     padding-bottom: 250px; /* Ajusta este valor según la altura de tu banner */
 }
 
-/* --- ESTILO ELITE: DIMENSIONES JUSTAS --- */
-@media (max-width: 768px) {
-    .support-banner {
-        /* Posicionamiento */
-        position: fixed;
-        left: 50%;
-        transform: translateX(-50%);
-        bottom: 10px; /* Más pegado al borde inferior */
-        
-        /* Dimensiones ajustadas */
-        width: 92%;
-        max-width: 340px;
-        padding: 10px; /* Padding reducido al mínimo necesario */
-        border-radius: 12px;
-        
-        /* Estilos visuales */
-        background: rgba(255, 255, 255, 0.98); /* Fondo casi opaco para mejor lectura */
-        backdrop-filter: blur(8px);
-        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-        z-index: 9998;
-        box-sizing: border-box;
-    }
 
     /* Reducción de márgenes en el contenido interno */
     .banner-content p {
@@ -1485,5 +1444,28 @@ body {
     .support-banner a {
         padding: 8px 12px;
         font-size: 12px;
+    }
+
+    /* --- AJUSTE DEFINITIVO DEL BANNER DE DONACIONES PARA MÓVIL --- */
+@media (max-width: 768px) {
+    .support-banner {
+        position: fixed !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        bottom: 10px !important;
+        width: 92% !important; 
+        max-width: 350px !important;
+        padding: 12px !important;
+        border-radius: 12px !important;
+        background: rgba(255, 255, 255, 0.95) !important;
+        backdrop-filter: blur(8px) !important;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.2) !important;
+        z-index: 9999 !important;
+        box-sizing: border-box !important;
+    }
+
+    .banner-content p {
+        font-size: 12px !important;
+        margin: 5px 0 !important;
     }
 }
