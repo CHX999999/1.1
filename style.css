@@ -1523,20 +1523,40 @@ body {
     }
 }
 
-/* --- ESTILO ELITE: SIN NEGRITA (Elegante) --- */
+/* --- ESTILO ELITE: BORDES MÁS CERRADOS Y "X" MAYOR --- */
 @media (min-width: 769px) {
     .support-banner {
-        /* ... mantén todo lo anterior igual ... */
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        width: 400px; /* Un poco más compacto */
+        
+        background: #ffffff !important; 
+        color: #1a1a1a !important;
+        
+        padding: 20px 24px; /* Achicamos el padding (más compacto) */
+        border-radius: 20px;
+        box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+        z-index: 9999;
+        
+        font-family: sans-serif;
         font-size: 16px !important; 
-        font-weight: 500 !important; /* <--- AQUÍ EL CAMBIO: peso medio */
-        line-height: 1.5;
+        font-weight: 500 !important; 
+        line-height: 1.4;
         text-align: center;
+    }
+
+    /* Agrandamos la X (botón de cierre) */
+    .support-banner .close-btn {
+        font-size: 20px !important; /* Un tamaño más grande */
+        padding: 5px;
+        cursor: pointer;
     }
 
     .support-banner p, .support-banner a, .support-banner span {
         font-size: 16px !important;
         color: #1a1a1a !important;
-        font-weight: 500 !important; /* <--- AQUÍ EL CAMBIO: peso medio */
+        font-weight: 500 !important;
     }
 }
 
