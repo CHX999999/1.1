@@ -471,21 +471,3 @@ shareBtn.onclick = () => {
     }
 };
 
-// --- LÓGICA PARA EVITAR QUE EL BANNER TAPE EL FOOTER ---
-window.addEventListener('scroll', () => {
-    const banner = document.getElementById('supportBanner');
-    const footer = document.querySelector('.footer-elite'); 
-    
-    if (!banner || !footer) return;
-
-    const scrollHeight = document.documentElement.scrollHeight;
-    const scrollTop = window.scrollY;
-    const clientHeight = window.innerHeight;
-    
-    // Si faltan menos de 150px para el final, cambiamos el estilo
-    if (scrollTop + clientHeight >= scrollHeight - 150) {
-        banner.classList.add('is-at-bottom');
-    } else {
-        banner.classList.remove('is-at-bottom');
-    }
-});
