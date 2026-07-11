@@ -1369,36 +1369,25 @@ body {
     font-size: 14px;
 }
 
-/* --- RESPONSIVE: CARTEL DE DONACIONES --- celu*/
+/* --- AJUSTE RESPONSIVE: CARTEL DE DONACIONES --- */
 @media (max-width: 768px) {
     .support-banner {
-        /* Ajustamos posición y tamaño para móviles */
-        width: calc(100% - 32px); /* Deja un margen de 16px a cada lado */
-        right: 16px;
-        bottom: 16px;
-        max-width: none; /* Elimina la restricción de 300px */
-        padding: 20px;
+        /* Mantenemos tu diseño original, solo ajustamos tamaño y posición */
+        width: 90%;          /* Tamaño conveniente para móviles */
+        max-width: 340px;    /* No se vuelve excesivamente ancho en tablets */
+        right: 5%;           /* Centrado horizontal */
+        left: 5%;            /* Centrado horizontal */
+        bottom: 20px;        /* Mantiene la distancia inferior original */
+        padding: 12px;       /* Reducimos ligeramente el padding interno */
     }
 
     .banner-content p {
-        font-size: 15px; /* Ligeramente más grande para mejor lectura */
-        line-height: 1.5;
-    }
-
-    .banner-actions {
-        gap: 12px; /* Más espacio para separar los botones */
+        font-size: 13px;     /* Ajuste leve para que el texto encaje mejor */
     }
 
     .cta-btn, 
     .sponsor-btn {
-        /* Aumentamos padding para asegurar una zona táctil cómoda */
-        padding: 12px 16px;
-        font-size: 15px;
-    }
-
-    .close-btn {
-        /* Hacemos el área de cierre más accesible */
-        padding: 10px;
-        font-size: 22px;
+        padding: 8px 12px;   /* Mantenemos tu padding original */
+        font-size: 13px;     /* Mantenemos tu tamaño de fuente original */
     }
 }
