@@ -1407,20 +1407,33 @@ body {
 }
 
 
-/* --- ESTILO ELITE: CENTRADO PERFECTO --- */
+/* --- ESTILO ELITE: PERFECCIONADO Y CENTRADO --- */
 @media (max-width: 768px) {
     .support-banner {
-        position: relative; 
-        margin: 20px auto; /* El "auto" a los lados es lo que lo centra */
-        width: 90%;
-        max-width: 350px;
-        background: rgba(255, 255, 255, 0.95);
-        backdrop-filter: blur(10px);
-        padding: 16px;
+        /* Centrado */
+        margin: 20px auto;
+        display: block;
+        
+        /* Estilos visuales */
+        border: none !important;
+        background: rgba(255, 255, 255, 0.95); 
+        backdrop-filter: blur(10px); 
+        padding: 14px;
+        width: 92%;
+        max-width: 340px;
         border-radius: 16px;
         box-shadow: 0 8px 30px rgba(0,0,0,0.3);
-        border: none;
-        display: block; /* Asegura que el margin auto funcione */
-        box-sizing: border-box; /* Evita que el padding ensanche el banner */
+        transition: transform 0.3s ease, opacity 0.3s ease;
+        
+        /* Asegurar consistencia */
+        box-sizing: border-box;
+    }
+
+    .banner-content p {
+        font-size: 13px;
+        color: #1e293b;
+        font-weight: 500;
+        margin-bottom: 12px;
+        text-align: center; /* Centramos también el texto para mayor armonía */
     }
 }
