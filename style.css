@@ -1446,13 +1446,11 @@ body {
         font-size: 12px;
     }
 
-
-
-   /* --- ESTILO ELITE: TODO EN UN SOLO BLOQUE --- */
+/* --- ESTILO ELITE: AJUSTE FINAL Y ELEVADO --- */
 @media (max-width: 768px) {
-    /* El padding del body debe estar aquí para que el scroll funcione */
+    /* Reducimos el padding para que el scroll termine más arriba */
     body {
-        padding-bottom: 180px; 
+        padding-bottom: 140px !important; 
     }
 
     .support-banner {
@@ -1471,8 +1469,9 @@ body {
         box-sizing: border-box;
     }
 
+    /* Ajustamos este bottom para que el banner quede "pegado" al texto */
     .support-banner.at-bottom {
         position: absolute;
-        bottom: 20px;
+        bottom: 40px; /* Aumentar este número subirá el cartel hacia arriba */
     }
 }
