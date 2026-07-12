@@ -10,7 +10,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    overflow: hidden;
+  overflow: visible;
     transition: all 0.3s ease;
     position: relative;
 }
@@ -217,7 +217,7 @@ body::before {
     align-items: stretch;
     position: relative;
     z-index: 1;
-    overflow: hidden;
+  overflow: visible;
 }
 
 .card {
@@ -238,7 +238,7 @@ body::before {
         inset 0 1px 0 rgba(255, 255, 255, 0.08),
         inset 0 -1px 0 rgba(0, 0, 0, 0.3);
     position: relative;
-    overflow: hidden;
+  overflow: visible;
     backdrop-filter: blur(10px);
 }
 
@@ -468,7 +468,7 @@ body.light-mode
     width: min(95vw, 1600px);
     margin: 16px auto;
     padding: 0 16px;
-    overflow-x: auto;
+  overflow: visible;
 }
 
 .comparison-table {
@@ -476,7 +476,7 @@ body.light-mode
     border-collapse: collapse;
     background: linear-gradient(145deg, #1A1F2E 0%, #0D1117 100%);
     border-radius: 16px;
-    overflow: hidden;
+overflow: visible;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
 }
 
@@ -531,7 +531,7 @@ body.light-mode
     max-width: 500px;
     width: 90%;
     max-height: 80vh;
-    overflow-y: auto;
+overflow: visible;
     box-shadow: 0 16px 64px rgba(0, 0, 0, 0.5);
 }
 
@@ -1112,7 +1112,7 @@ body.light-mode .icon-btn:hover {
         grid-template-rows: repeat(2, 1fr);
         height: calc(100vh - 180px);
         margin: 10px auto;
-        overflow: hidden;
+      overflow: visible;
     }
     
     .card {
@@ -1142,16 +1142,16 @@ body.light-mode .icon-btn:hover {
 html, body {
     height: auto !important;
     min-height: 100% !important;
-    overflow-y: auto !important; /* Habilita el scroll vertical */
-    overflow-x: hidden !important; /* Evita que se mueva hacia los lados */
-    -webkit-overflow-scrolling: touch !important; /* Scroll suave en iPhone/Android */
+    overflow: visible;nt; /* Habilita el scroll vertical */
+    overflow: visible;tant; /* Evita que se mueva hacia los lados */
+    -webkit-overflow: visible; !important; /* Scroll suave en iPhone/Android */
 }
 
 /* 2. Asegurar que el contenedor principal permita el desborde del contenido */
 #cards-view {
     height: auto !important;
     min-height: 100vh !important;
-    overflow-y: auto !important;
+    overflow: visible;nt;
     padding-bottom: 80px !important; /* Espacio para que el último cuadro no quede pegado al borde */
 }
 
