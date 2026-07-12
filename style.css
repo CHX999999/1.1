@@ -1605,8 +1605,13 @@ body {
 }
 
 @media (max-width: 640px) {
+    .card {
+        /* Eliminamos la transición de scale para el móvil */
+        transition: transform 0.1s ease !important;
+    }
+
     .card:hover {
-        /* Eliminamos el scale para que sea instantáneo */
-        transform: translateY(-2px) scale(1) !important;
+        /* Solo dejamos el movimiento vertical muy leve o quitamos el scale por completo */
+        transform: none !important; 
     }
 }
