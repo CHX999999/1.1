@@ -1614,4 +1614,11 @@ body {
         /* Solo dejamos el movimiento vertical muy leve o quitamos el scale por completo */
         transform: none !important; 
     }
+}@media (max-width: 640px) {
+    .card:hover {
+        /* Eliminamos cualquier transformación de tamaño o posición */
+        transform: none !important;
+        /* Mantenemos solo el cambio de sombra para que se note que es interactivo */
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4) !important;
+    }
 }
