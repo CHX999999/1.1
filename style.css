@@ -1646,3 +1646,37 @@ body {
     padding-top:8px; /* Esto empuja el contenido hacia abajo desde adentro */
     overflow: visible;
 }
+
+
+/* --- Corrección para equilibrio matemático perfecto en móviles --- */
+@media (max-width: 640px) {
+    .header-top {
+        position: relative; /* Crea el punto de referencia */
+        display: flex;
+        justify-content: space-between; /* Alinea los botones a los extremos */
+        align-items: center;
+        width: 100%;
+        padding: 0 15px; /* Margen de seguridad para los botones */
+        height: 60px; /* Altura fija para evitar saltos */
+    }
+
+    .main-title {
+        position: absolute; /* Saca al título del flujo de los botones */
+        left: 50%; /* Lo pone justo en el medio */
+        transform: translateX(-50%); /* Ajuste fino para centrado exacto */
+        margin: 0;
+        pointer-events: none; /* Asegura que no bloquee los clicks de los botones */
+    }
+
+    /* Aseguramos que los botones no influyan en el centrado */
+    #theme-toggle, 
+    #share-btn {
+        width: 45px; /* Ancho fijo para simetría */
+        height: 45px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 2; /* Siempre por encima del título */
+    }
+}
+
