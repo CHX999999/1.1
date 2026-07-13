@@ -1275,12 +1275,21 @@ details {
     color: #38BDF8;
     border-color: #38BDF8;
 }
+CSS
 .header-top {
     display: grid;
-    grid-template-columns: 46px 1fr 46px; /* Botón izq, Título centrado, Botón der */
-    align-items: center;                  /* Centrado vertical */
+    /* La clave es que la columna 1 y la 3 sean idénticas */
+    grid-template-columns: 50px 1fr 50px; 
+    align-items: center;
     width: 100%;
-    padding: 0px 0;                      /* Mantenemos tu padding original */
+    padding: 10px 0;
+}
+
+/* Forzamos a los botones a estar centrados en su celda de 50px */
+#theme-toggle, .header-actions {
+    display: flex;
+    justify-content: center; /* Centra el botón horizontalmente en su espacio */
+    align-items: center;
 }
 
 .main-container {
