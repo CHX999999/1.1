@@ -1334,30 +1334,12 @@ body {
     }
 
     /* Ajuste específico para el contenedor de la cabecera en móvil */
-/* Nuevo código para la cabecera móvil */
-.header-top {
-    position: relative;
+/* Ajuste para separar los botones a los extremos */
+.header-actions {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Empuja los elementos hacia las esquinas */
     align-items: center;
-    width: 100%;
-    padding: 0 15px;
-}
-
-.main-title {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    margin: 0;
-}
-
-#theme-toggle, #share-btn {
-    width: 40px; 
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 2;
+    width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
 }
 }
 
